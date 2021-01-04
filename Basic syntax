@@ -1,0 +1,115 @@
+using System;
+
+namespace HelloWorld
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // this is comment
+            /* this is 
+             * multiline 
+             * comment 
+             */
+            /// <summary>
+            /// C# basics syntax learning
+            /// </summary>
+
+            Console.WriteLine("Hello World!");
+            int myInt = 5;
+            double myDouble = 5.5;
+            bool check = true;
+            double result = myDouble / myInt;
+            const int myConst = 4;
+            char myChar = 'c';
+            string myString = "test string";
+
+            Console.WriteLine(check ? "True" : "False");
+            Console.WriteLine("myInt: {0}", myInt);
+            Console.WriteLine("myDouble: {0}", myDouble);
+            Console.WriteLine("result:  {0}", result);
+            Console.WriteLine("myConst: {0}", myConst);
+            Console.WriteLine("myChar: {0}", myChar);
+            Console.WriteLine("myString: {0}", myString);
+
+            int minValue = int.MinValue;
+            int maxValue = int.MaxValue;
+
+            double minDouble = double.MinValue;
+            double maxDouble = double.MaxValue;
+
+            Console.WriteLine("minInt: {0}, maxInt {0}, minDouble: {0},Max double: {0} ", minValue, maxValue, minDouble, maxDouble);
+
+            // using var
+
+            var newInt = 5;
+            var newString = "test string";
+            var newChar = 'c';
+            var boolen = true;
+
+            Console.WriteLine("variables decalered using Var newInt: {0}, newString {0}, newChar: {0},boolen: {0} ", newInt, newString, newChar, boolen);
+
+            // operations
+            int z = 1 + 6;
+            var test = "apple " + " orange";
+
+            Console.WriteLine("z: {0}, test {0} ", z, test);
+            // explicit cast
+
+            int a = 4;
+            int b = 6;
+            double c = (double) a/ b;
+            Console.WriteLine(c);
+
+            // convert to string
+
+            double s = 3.1457;
+            string sString = s.ToString();
+
+            Console.WriteLine(sString + "!");
+
+            // escape sequence
+
+            var filePath = @"c:\myFolder\mfFile.txt";
+            Console.WriteLine(filePath);
+
+            char[] chars = { 'w', 'o', 'r', 'd' };
+
+            // Create a string from a character array.
+            string string1 = new string(chars);
+            Console.WriteLine(string1);
+
+            string str = string.Empty;
+            if (str == null || str.Equals(String.Empty) || str.Trim().Equals(String.Empty))
+            {
+                str = "empty";
+                Console.WriteLine(str, str.Length);
+            }
+
+            // foreach loop
+            string car = "volvo car";
+            car = car.ToUpper();
+            string subString = car.Substring(0, 2).ToLower();
+            Console.WriteLine(subString);
+            foreach(char i in car)
+            {
+                Console.WriteLine(i);
+            }
+
+            string[] strSplit = car.Split();
+            foreach(string i in strSplit)
+            {
+                Console.WriteLine(i);
+            }
+
+            // reading from console
+            Console.WriteLine("Enter your name");
+            var name = Console.ReadLine();
+            Console.WriteLine("The name you have entered is: {0}", name);
+
+
+
+
+        }
+    }
+}
