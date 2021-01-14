@@ -1,0 +1,7 @@
+Linked list
+   using System.Collections.Generic;
+   LinkedList <Type_of_linkedlist> linkedlist_name = new LinkedList <Type_of_linkedlist>();
+   eg: 
+    LinkedList<String> my_list = new LinkedList<String>(); 
+    LinkedList<Int> my_list = new LinkedList<Int>(); 
+   
