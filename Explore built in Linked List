@@ -1,0 +1,46 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Runtime.CompilerServices;
+using System.Security.Cryptography.X509Certificates;
+
+namespace SinglyLinkedListDemo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Creating linked list
+            LinkedList<string> myList = new LinkedList<string>();
+            myList.AddLast("Ron");
+            myList.AddLast("Amy");
+            myList.AddLast("Elle");
+            Console.WriteLine("List of names:");
+            foreach (string str in myList)
+            {
+                Console.WriteLine(str);
+
+            }
+
+            LinkedListNode<string> nameFound = myList.Find("Amy");
+            myList.AddBefore(nameFound,"Ford");
+            myList.AddAfter(nameFound, "Tess");
+            Console.WriteLine("List of names:");
+            foreach (string str in myList)
+            {
+                Console.WriteLine(str);
+
+            }
+
+            myList.Remove("Ford");
+            Console.WriteLine("List of names:");
+            foreach (string str in myList)
+            {
+                Console.WriteLine(str);
+
+            }
+        }
+
+    }
+}
+    
